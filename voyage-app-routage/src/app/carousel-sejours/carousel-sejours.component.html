@@ -1,0 +1,8 @@
+<h1>Carrousel</h1>
+<div  *ngFor="let sejour of listeSejours" [hidden]="sejourCourant != sejour">
+  <h2>{{sejour.nom}} - {{sejour.prix}} €</h2>
+  <img [src]="'assets/' + sejour.urlImage" height="300px"/>
+</div>
+<br><br>
+<button class="btn btn-danger" (click)="stop()">Stop</button>
+<button class="btn btn-primary" (click)="start()">Start</button>
